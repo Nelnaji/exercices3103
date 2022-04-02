@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  height: 75vh;
+}
+
+header,
+footer {
+  background: #0404fb;
+  height: 10vh;
+  border-radius: 8px;
+}
+
+aside {
+  background: #fb7b53;
+  width: 25%;
+}
+
+article {
+  background: #6495ed;
+  width: 50%;
+}
+
+nav {
+  order: -1;
+  background: #fb7b53;
+  width: 25%;
+}
+
+aside,
+nav,
+article {
+  border-radius: 5px;
+}

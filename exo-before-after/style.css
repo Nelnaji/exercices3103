@@ -1,0 +1,108 @@
+* {
+    /* box-sizing: border-box;
+    margin: 0;
+    padding: 0; */
+}
+
+#exo1 h1 {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+}
+
+#exo1 h1::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: width 3s;
+}
+
+#exo1 h1:hover::after {
+    width: 100%;
+}
+
+
+#exo2 h1 {
+    display: inline-block;
+    position: relative;
+}
+
+#exo2 h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: red;
+    transition: 3s;
+}
+
+#exo2 h1:hover::after {
+    width: 100%;
+}
+
+#exo3 h1 {
+    display: inline-block;
+    position: relative;
+}
+
+#exo3 h1::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleY(1);
+    transform-origin: bottom;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: red;
+    transition: 3s;
+    z-index: -1;
+
+}
+
+#exo3 h1:hover::after {
+    transform: scaleY(8);
+    z-index: -1;
+    /* transform-origin: bottom; */
+}
+
+#exo4 h1 {
+    display: inline-block;
+
+}
+
+#exo4 h1::before {
+    transform: translateX(100%);
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-bottom: 2px solid solid;
+    border-left: 2px solid transparent;
+}
+
+#exo4 h1::after {
+    transform: translateX(-100%);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+#exo4 h1:hover {
+    color: inherit;
+    text-decoration: none;
+}
