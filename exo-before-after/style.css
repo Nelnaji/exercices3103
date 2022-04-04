@@ -5,7 +5,6 @@
 }
 
 body {
-  font-family: "lato";
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -82,11 +81,31 @@ h1 {
 #exo4 {
   position: relative;
 }
+#exo4::after,
 #exo4::before {
   position: absolute;
   content: "";
-  background-color: #edf5e1;
-  height: 0.5em;
-  width: 0.5em;
+  width: 0;
+  height: 0;
+}
+#exo4:hover::after,
+#exo4:hover::before {
+  width: 100%;
+  height: calc(100% - 0.5rem);
+}
+
+#exo4:hover::before {
   top: 0;
+  left: 0;
+  border-top: 0.5rem solid #edf5e1;
+  border-right: 0.5rem solid #edf5e1;
+  transition: width 0.2s ease, height 0.2s ease 0.2s;
+}
+#exo4:hover::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 0.5rem solid #edf5e1;
+  border-left: 0.5rem solid #edf5e1;
+  transition: width 0.2s ease 0.4s, height 0.2s ease 0.6s,
+    border-bottom 0s ease 0.4s;
 }
